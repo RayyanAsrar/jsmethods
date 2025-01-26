@@ -1,31 +1,36 @@
 
-// let str = "this is test world"
-// let a = "test"
-// let b = "best"
+
+// let str1 = "this is test world test "
+// let oldWord = "test"
+// let newWord = "best"
+// for(let i=0 ; i<str1.length ; i++){
+//     // console.log(`Index ${i}: ${str[i]}`);       
     
-// for(let i=0 ; i<str.length ; i++){
-//    let matchVal= str.slice(i , i +a.length)
-//     if(matchVal===a){
-//         var newStr = str.slice(0,i) + b + str.slice(i+a.length)
-//     }
+//    let matchVal= str1.slice(i , i +oldWord.length)
+//     if(matchVal===oldWord){
+//         str1 = str1.slice(0,i) + newWord + str1.slice(i+oldWord.length)
+        
+//     }   
 // }
-// console.log(newStr);
+// console.log(str1);
 
 let str = "this is test world"
-result=""
+let result=""
 let a = "test"
 let b = "best"
 let temp=""
-for(let i=0;i<str.length;i++){
-    if(str[i]===" "){
+for(let i=0;i<=str.length;i++){
+let  char= str[i];
+    if(char === " " || char === "," || char === "." || char === ""){
         if(temp== a){
             result+=b
         }else{
             result+=temp
-        }temp=""
-        result+=str[i]
+        }temp=""    
+        result+= char
     }else{
-        temp+=str[i]
+        temp+= char
     }
 }
 console.log(result)
+
